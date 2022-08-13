@@ -1,0 +1,16 @@
+.bg-gray {
+  background-color: #e6ecf0;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.result-container {
+  margin: 16px;
+  padding: 16px;
+}
