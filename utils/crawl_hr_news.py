@@ -7,7 +7,8 @@ import datetime
 import random
 
 def is_target_date(target_date: str, content_date: str):
-    return '日' in content_date and target_date == content_date[0:len(target_date)]
+    idx_hi: int = content_date.find('日')
+    return idx_hi >= 0 and target_date == content_date[0:idx_hi]
 
 # def is_GRCS_related(article: str):
 #     return any(grcs_word in article for grcs_word in GRCS_WORDS)
