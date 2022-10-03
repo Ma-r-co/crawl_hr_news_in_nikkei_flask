@@ -14,10 +14,10 @@ app = Flask(__name__)
 @app.route('/', methods = ["GET" , "POST"]) #2 GETとPOSTをリクエストできるようにする
 def index():
     if request.method == 'POST': #3POSTの処理
-      target_date = request.form['target_date']
-      fi_words = request.form['fi_words']
-      result = crawl_hr_news(str(int(target_date.split('-')[-1])), fi_words.split(','))
-      return render_template('index.html', target_date=target_date, fi_words=fi_words, result='\n'.join(result), result_count=len(result) )
+        target_date = request.form['target_date']
+        fi_words = request.form['fi_words']
+        result = crawl_hr_news(str(int(target_date.split('-')[-1])), fi_words.split(','))
+        return render_template('index.html', target_date=target_date, fi_words=fi_words, result='\n'.join(result), result_count=len(result) )
     return render_template('index.html', target_date=DEFAULT_TARGET_DATE, fi_words=','.join(DEFAULT_FI_WORDS)) #6 GETの処理
 
 if __name__ == '__main__':

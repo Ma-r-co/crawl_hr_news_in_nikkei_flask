@@ -11,6 +11,7 @@
 }
 
 .result-container {
-  margin: 16px;
-  padding: 16px;
+  background-color: #b6c8d3;
+  margin: 16px 0px 0px;
+  padding: 16px
 }

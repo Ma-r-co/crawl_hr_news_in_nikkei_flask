@@ -35,7 +35,6 @@ def crawl_hr_news(TARGET_DATE: str, FI_WORDS: list) -> list:
     for bn in range(1, 1982, 30):  # ページのURLが /?bn=31, /?bn=61のように30刻みとなっていることに対応
         time.sleep(random.randint(1, 2))
         soup = BeautifulSoup(session.get(BASE_URL+'/news/jinji/hatsurei/?bn='+str(bn), headers=HEADERS).text, features="lxml")
-        # print('[{}] Proceeding with Page-{}'.format(datetime.datetime.now(), bn // 30 + 1))
         for ul_num in range(1, 4):
             for li_num in range(1, 11):
                 cnt += 1
